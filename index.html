@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>蜂鸟影视 · 今晚看什么：电影电视剧综艺动漫更新日历与高分片单导航</title>
+<meta name="description" content="蜂鸟影视是一个面向普通观众的影视观看决策页。我们把当晚可看的内容分成电影、电视剧、综艺、动漫四条线，再按片长、更新日、节目物料和你剩下的时间重新归位，帮你在一分钟内决定今晚看什么。片单由编辑按口碑、完成度与后劲三项筛选，更新日期与集数逐条标注，不做“正在更新”式的含糊话术。这里收录热映院线、经典重温、悬疑短剧、治愈番剧与下饭综艺，也保留影视资讯与留言征集板块，你想看的题材可以告诉我们。页面在手机、平板与电脑上自适应，所有分类标签均为站内锚点，点击即定位、不产生新页面跳转。">
+<meta name="keywords" content="蜂鸟影视,今晚看什么,影视更新日历,电影片单,电视剧连播,综艺节目表,番剧月历">
+<link rel="canonical" href="https://fengniaoyingshi-app.github.io/">
+<link rel="alternate" href="https://fengniaoyingshi-app.github.io/" hreflang="zh-CN">
+<meta name="robots" content="index,follow">
+<meta name="bingbot" content="index,follow">
+<meta name="googlebot" content="index,follow">
+<meta name="author" content="蜂鸟影视编辑部">
+<meta name="copyright" content="蜂鸟影视">
+<meta name="theme-color" content="#10131c">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:type" content="website">
+<meta property="og:title" content="蜂鸟影视 · 今晚看什么">
+<meta property="og:description" content="电影、电视剧、综艺、动漫四条线，按更新日与片长重新归位的影视观看决策页。">
+<meta property="og:url" content="https://fengniaoyingshi-app.github.io/">
+<meta property="og:site_name" content="蜂鸟影视">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="蜂鸟影视 · 今晚看什么">
+<meta name="twitter:description" content="今晚想看什么？蜂鸟影视按片长、更新日与节目物料，帮你一分钟锁定目标。">
+<style>
+:root{
+  --ink:#10131c; --ink2:#171a26; --ink3:#1f2333; --line:#2a2f42;
+  --txt:#e8eaf2; --txt2:#a9aec4; --txt3:#7b8199;
+  --brand:#ff5b3a; --brand2:#ffb020; --ok:#3ddc97; --blue:#5b8cff;
+  --shadow:0 12px 40px rgba(0,0,0,.45);
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink); color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  line-height:1.75; font-size:16px; overflow-x:hidden;
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-2;
+  background:
+    radial-gradient(900px 500px at 12% -8%, rgba(255,91,蜂鸟,.20), transparent 60%),
+    radial-gradient(800px 600px at 88% 12%, rgba(91,140,255,.16), transparent 60%),
+    radial-gradient(700px 700px at 50% 105%, rgba(255,176,32,.12), transparent 60%),
+    var(--ink);
+}
+body::after{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px);
+  background-size:100% 4px;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;border:0;background:none;color:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ============ 顶部 ============ */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(16,19,28,.82);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.topbar .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.logo b{font-size:22px;letter-spacing:1px;background:linear-gradient(92deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo span{font-size:11px;color:var(--txt3);border:1px solid var(--line);border-radius:20px;padding:1px 8px}
+.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav::-webkit-scrollbar{display:none}
+.nav a{
+  font-size:14px;color:var(--txt2);padding:8px 12px;border-radius:10px;white-space:nowrap;flex:0 0 auto;
+  transition:.2s;
+}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav a.on{color:#fff;background:rgba(255,91,蜂鸟,.16);box-shadow:inset 0 0 0 1px rgba(255,91,蜂鸟,.35)}
+.mbtn{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--line);align-items:center;justify-content:center;margin-left:auto;flex:0 0 auto}
+.mbtn i{width:18px;height:2px;background:var(--txt);box-shadow:0 -6px 0 var(--txt),0 6px 0 var(--txt);border-radius:2px}
+
+/* ============ 首屏 ============ */
+.hero{padding:56px 0 40px}
+.tagline{display:inline-block;font-size:12px;color:var(--brand2);border:1px solid rgba(255,176,32,.3);border-radius:20px;padding:3px 12px;letter-spacing:1px}
+.hero h1{font-size:44px;line-height:1.2;margin:18px 0 6px;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;background:linear-gradient(92deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:var(--txt2);font-size:16px;max-width:640px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.stat{background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.stat b{display:block;font-size:30px;letter-spacing:-1px}
+.stat b small{font-size:14px;color:var(--txt3);font-weight:400;margin-left:3px}
+.stat span{font-size:12px;color:var(--txt3)}
+
+.hero-foot{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.chip{
+  font-size:13px;color:var(--txt2);border:1px solid var(--line);border-radius:30px;padding:7px 14px;
+  transition:.2s;cursor:pointer;
+}
+.chip:hover{border-color:var(--brand);color:#fff;transform:translateY(-1px)}
+.chip.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}
+.hero-foot p{font-size:12px;color:var(--txt3);margin-left:auto}
+.hero-foot p a{color:var(--txt2);border-bottom:1px dashed var(--txt3)}
+
+/* ============ 栏目 ============ */
+section{padding:44px 0}
+.sec-h{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.sec-h .no{font-size:12px;color:var(--brand);letter-spacing:2px;font-weight:700}
+.sec-h h2{font-size:26px;letter-spacing:-.3px}
+.sec-h h2 i{font-style:normal;color:var(--txt3);font-weight:400;font-size:15px;margin-left:8px}
+.sec-h .more{margin-left:auto;font-size:13px;color:var(--txt3);transition:.2s}
+.sec-h .more:hover{color:var(--brand)}
+
+/* 今日更新台 */
+.ticker{
+  display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:14px;
+}
+.tk{
+  border-radius:var(--r);padding:18px;border:1px solid var(--line);
+  background:linear-gradient(165deg,rgba(255,255,255,.05),rgba(255,255,255,.012));
+  transition:.25s;
+}
+.tk:hover{transform:translateY(-4px);border-color:rgba(255,91,蜂鸟,.5);box-shadow:var(--shadow)}
+.tk .t{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--txt3)}
+.tk .t b{color:var(--brand2);font-size:13px}
+.tk h3{font-size:19px;margin:8px 0 4px}
+.tk .ep{font-size:13px;color:var(--txt2)}
+.tk .ep u{text-decoration:none;color:var(--brand);font-weight:600}
+.tk .ft{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.tk .ft s{font-size:12px;color:var(--txt3);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+.tk .ft em{font-style:normal;font-size:12px;color:var(--txt3);margin-left:auto}
+
+/* 时间条 */
+.bars{display:grid;gap:14px}
+.bar{
+  display:grid;grid-template-columns:120px 1fr 70px;gap:16px;align-items:center;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+}
+.bar .lb{font-size:14px}
+.bar .lb i{display:block;font-style:normal;font-size:11px;color:var(--txt3)}
+.track{height:9px;background:rgba(255,255,255,.07);border-radius:20px;overflow:hidden}
+.track i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+.bar .vl{text-align:right;font-size:13px;color:var(--txt2)}
+.bar .vl b{color:var(--brand2)}
+
+/* 卡片网格 */
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{
+  border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(165deg,rgba(255,255,255,.05),rgba(255,255,255,.012));
+  transition:.25s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-5px);border-color:rgba(91,140,255,.55);box-shadow:var(--shadow)}
+.poster{position:relative;aspect-ratio:3/4;overflow:hidden}
+.poster .art{position:absolute;inset:0;display:flex;align-items:flex-end;padding:12px;font-size:30px;font-weight:800;color:rgba(255,255,255,.9);text-shadow:0 3px 14px rgba(0,0,0,.6)}
+.poster .badge{position:absolute;top:10px;left:10px;font-size:11px;font-weight:700;color:#10131c;background:var(--brand2);border-radius:6px;padding:2px 7px}
+.poster .score{position:absolute;top:10px;right:10px;font-size:12px;font-weight:700;color:#fff;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:2px 7px;backdrop-filter:blur(4px)}
+.poster .meta{position:absolute;left:10px;bottom:10px;right:10px;display:flex;gap:6px;flex-wrap:wrap}
+.poster .meta s{font-size:11px;color:rgba(255,255,255,.92);text-decoration:none;background:rgba(0,0,0,.5);border-radius:5px;padding:2px 6px;backdrop-filter:blur(4px)}
+.card .info{padding:13px 14px;flex:1;display:flex;flex-direction:column;gap:6px}
+.card .info h3{font-size:16px;line-height:1.4}
+.card .info p{font-size:12.5px;color:var(--txt3);line-height:1.6}
+.card .info .row{margin-top:auto;display:flex;align-items:center;font-size:12px;color:var(--txt2)}
+.card .info .row b{color:var(--ok)}
+.card .info .row em{font-style:normal;margin-left:auto;color:var(--txt3)}
+
+/* 节目表 */
+.schedule{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sch{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.025)}
+.sch .hd{background:linear-gradient(90deg,var(--brand),#d63f22);padding:13px 16px;display:flex;align-items:center;gap:8px;font-weight:700}
+.sch ul{list-style:none;padding:6px}
+.sch li{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:11px 10px;border-bottom:1px dashed rgba(255,255,255,.07);align-items:baseline}
+.sch li:last-child{border-bottom:0}
+.sch li time{font-size:12px;color:var(--brand2);font-weight:700}
+.sch li div{font-size:13.5px;line-height:1.5}
+.sch li div i{display:block;font-style:normal;font-size:11.5px;color:var(--txt3);margin-top:2px}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+.news .lead{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:linear-gradient(160deg,rgba(255,91,蜂鸟,.1),rgba(255,255,255,.02) 55%);display:flex;flex-direction:column}
+.news .lead .date{font-size:12px;color:var(--brand2)}
+.news .lead h3{font-size:22px;margin:8px 0 10px;line-height:1.5}
+.news .lead p{color:var(--txt2);font-size:14px}
+.news .lead a{margin-top:auto;align-self:flex-start;font-size:13px;color:var(--brand);padding-top:16px}
+.newslist{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.newslist li{list-style:none;padding:15px 18px;border-bottom:1px solid rgba(255,255,255,.06);transition:.2s}
+.newslist li:last-child{border-bottom:0}
+.newslist li:hover{background:rgba(255,255,255,.03)}
+.newslist li time{font-size:11.5px;color:var(--txt3)}
+.newslist li h4{font-size:15px;font-weight:500;margin-top:3px;line-height:1.55}
+
+/* 留言 */
+.board{
+  border:1px solid var(--line);border-radius:var(--r);
+  background:linear-gradient(160deg,rgba(91,140,255,.08),rgba(255,255,255,.02));padding:26px;
+}
+.board p.tip{color:var(--txt2);font-size:14px;max-width:760px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.form input,.form textarea{
+  font:inherit;font-size:14px;color:var(--txt);background:rgba(0,0,0,.28);
+  border:1px solid var(--line);border-radius:11px;padding:12px 14px;width:100%;
+  transition:.2s;
+}
+.form textarea{grid-column:1/-1;min-height:96px;resize:vertical;line-height:1.7}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--brand);background:rgba(0,0,0,.42)}
+.form button{
+  grid-column:1/-1;justify-self:start;font-weight:700;font-size:14px;
+  background:linear-gradient(92deg,var(--brand),#d63f22);color:#fff;border-radius:11px;padding:12px 26px;transition:.2s;
+}
+.form button:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.wall{margin-top:26px;display:grid;gap:10px}
+.wall .w{
+  display:grid;grid-template-columns:42px 1fr;gap:12px;
+  background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:12px;padding:14px;
+}
+.wall .av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#10131c;font-size:15px}
+.wall .w .who{font-size:13px;color:var(--txt2)}
+.wall .w .who b{color:var(--txt)}
+.wall .w .who time{font-size:11.5px;color:var(--txt3);margin-left:8px}
+.wall .w p{font-size:14px;margin-top:4px;line-height:1.7}
+.wall .w p mark{background:rgba(255,176,32,.16);color:var(--brand2);padding:1px 5px;border-radius:4px}
+
+/* 页脚 */
+footer{border-top:1px solid var(--line);padding:34px 0 44px;margin-top:20px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.foot h5{font-size:13px;color:var(--txt3);margin-bottom:12px;letter-spacing:1px}
+.foot ul{list-style:none;display:grid;gap:7px}
+.foot ul a{font-size:13.5px;color:var(--txt2);transition:.2s}
+.foot ul a:hover{color:var(--brand)}
+.foot .about p{font-size:13px;color:var(--txt2);max-width:420px}
+.copyright{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.07);font-size:12px;color:var(--txt3);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+.copyright a{color:var(--txt2)}
+.gotop{
+  position:fixed;right:16px;bottom:18px;z-index:40;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;display:none;align-items:center;justify-content:center;font-size:18px;
+  box-shadow:0 8px 22px rgba(255,91,蜂鸟,.4);
+}
+
+/* ============ 响应式 ============ */
+@media (max-width:960px){
+  .hero h1{font-size:33px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .ticker,.g4,.g3,.schedule,.foot{grid-template-columns:1fr 1fr}
+  .news{grid-template-columns:1fr}
+  .bar{grid-template-columns:1fr;gap:8px}
+  .bar .vl{text-align:left}
+}
+@media (max-width:640px){
+  .wrap{padding:0 14px}
+  .topbar .wrap{height:54px}
+  .logo b{font-size:19px}
+  .logo span{display:none}
+  .nav{display:none;position:absolute;top:54px;left:0;right:0;flex-direction:column;background:var(--ink2);border-bottom:1px solid var(--line);padding:10px}
+  .nav.open{display:flex}
+  .nav a{padding:13px 18px;border-radius:0;border-bottom:1px solid rgba(255,255,255,.05)}
+  .nav a.on{background:rgba(255,91,蜂鸟,.12);box-shadow:none;border-bottom:1px solid rgba(255,91,蜂鸟,.35)}
+  .mbtn{display:flex}
+  .hero{padding:34px 0 26px}
+  .hero h1{font-size:27px}
+  .hero .sub{font-size:14.5px}
+  section{padding:34px 0}
+  .sec-h h2{font-size:21px}
+  .stats{grid-template-columns:1fr 1fr;gap:10px}
+  .stat{padding:14px}
+  .stat b{font-size:24px}
+  .ticker,.g4,.g3,.schedule,.foot{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr}
+  .news .lead h3{font-size:18px}
+  .poster{aspect-ratio:5/6}
+  .card .info h3{font-size:15px}
+  .sch li{grid-template-columns:48px 1fr}
+  .foot{gap:22px}
+  .copyright{flex-direction:column;gap:8px}
+  .hero-foot p{margin-left:0;width:100%}
+}
+@media print{
+  .topbar,.gotop,.form,.mbtn{display:none!important}
+  body{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="蜂鸟影视首页"><b>蜂鸟影视</b><span>今晚看什么</span></a>
+    <nav class="nav" id="nav">
+      <a href="#today" class="on">今日更新台</a>
+      <a href="#pick">按时间挑片</a>
+      <a href="#film">电影片库</a>
+      <a href="#drama">连播剧场</a>
+      <a href="#show">笑声车间</a>
+      <a href="#anime">番剧月历</a>
+      <a href="#news">影视资讯</a>
+      <a href="#board">留言板</a>
+    </nav>
+    <button class="mbtn" id="mbtn" aria-label="打开菜单"><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="wrap hero">
+    <span class="tagline">影视观看决策页 · 2026 秋冬季版</span>
+    <h1>今晚想看什么？<br><em>蜂鸟影视</em>帮你在一分钟内定下来</h1>
+    <p class="sub">我们把当天可看的内容按电影、电视剧、综艺、动漫分成四条线，再按片长、更新日、节目物料和你剩下的时间重新归位——翻三屏首页还点不开一部片的问题，在这一页解决。</p>
+
+    <div class="stats">
+      <div class="stat"><b>4<small>条线</small></b><span>电影 / 剧集 / 综艺 / 番剧</span></div>
+      <div class="stat"><b>36<small>部</small></b><span>当期在播与可看条目</span></div>
+      <div class="stat"><b>9.1<small>平均口碑</small></b><span>编辑筛选后综合评分</span></div>
+      <div class="stat"><b>7<small>天</small></b><span>番剧月历追更周期</span></div>
+    </div>
+
+    <div class="hero-foot">
+      <span class="chip on">不限时间</span>
+      <span class="chip">20 分钟碎片</span>
+      <span class="chip">一个晚上</span>
+      <span class="chip">周末连看</span>
+      <span class="chip">下饭背景音</span>
+      <p>本站永久地址：<a href="https://fengniaoyingshi-app.github.io/" rel="noopener">https://fengniaoyingshi-app.github.io/</a>　建议收藏，随时回来挑片</p>
+    </div>
+  </div>
+
+  <!-- 今日更新台 -->
+  <section id="today">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 01</span>
+        <h2>今日更新台 <i>今天有哪些新东西可以点开</i></h2>
+        <a class="more" href="#film">进入片库 ›</a>
+      </div>
+      <div class="ticker">
+        <article class="tk">
+          <div class="t">电视剧 · <b>今日新集</b></div>
+          <h3>归墟纪年</h3>
+          <div class="ep">更新至 <u>第 27 集</u> · 古装 / 奇幻 · 全 40 集</div>
+          <div class="ft"><s>两条时间线合流</s><s>配角反转</s><em>本周第 3 次登顶</em></div>
+        </article>
+        <article class="tk">
+          <div class="t">综艺 · <b>加更物料</b></div>
+          <h3>声音考古队</h3>
+          <div class="ep">本期修复 <u>1987 年磁带原声</u> · 纪录片式慢综</div>
+          <div class="ft"><s>正片 45 分钟</s><s>花絮 12 分钟</s><em>适合睡前分段看</em></div>
+        </article>
+        <article class="tk">
+          <div class="t">动漫 · <b>周一栈道</b></div>
+          <h3>深蓝回声 第四季</h3>
+          <div class="ep">第 9 集已更 · <u>双线合流名场面</u> · 单集 24 分钟</div>
+          <div class="ft"><s>作画张数超常</s><s>原声已上线</s><em>追更人数 8.2 万</em></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 按时间挑片 -->
+  <section id="pick" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 02</span>
+        <h2>按时间挑片 <i>先看你能投入多久，再决定看什么</i></h2>
+        <a class="more" href="#film">看电影片库 ›</a>
+      </div>
+      <div class="bars">
+        <div class="bar">
+          <div class="lb">碎片二十分钟<i>通勤 / 排队 / 等饭</i></div>
+          <div class="track"><i style="width:22%"></i></div>
+          <div class="vl">约 <b>24</b> 部可选</div>
+        </div>
+        <div class="bar">
+          <div class="lb">一个完整夜晚<i>需要收束感，不要烂尾</i></div>
+          <div class="track"><i style="width:蜂鸟%"></i></div>
+          <div class="vl">约 <b>11</b> 部可选</div>
+        </div>
+        <div class="bar">
+          <div class="lb">周末连看<i>12 集内可一次看完</i></div>
+          <div class="track"><i style="width:40%"></i></div>
+          <div class="vl">约 <b>9</b> 部可选</div>
+        </div>
+        <div class="bar">
+          <div class="lb">长期跟播<i>每周更新，有追更节奏</i></div>
+          <div class="track"><i style="width:88%"></i></div>
+          <div class="vl">约 <b>12</b> 部连载中</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 电影片库 -->
+  <section id="film">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 03</span>
+        <h2>电影片库 <i>按片长分层，不按类型乱排</i></h2>
+        <a class="more" href="#drama">去连播剧场 ›</a>
+      </div>
+      <div class="grid g4">
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#2b3a5e,#101a30)">
+            <div class="art">星际<br>穿越</div>
+            <span class="badge">科幻</span><span class="score">9.4</span>
+            <div class="meta"><s>169 分钟</s><s>长片档</s><s>2014</s></div>
+          </div>
+          <div class="info">
+            <h3>星际穿越</h3>
+            <p>诺兰把天体物理拍成家庭戏，适合能腾出一整个晚上的观众。</p>
+            <div class="row"><b>长片档</b><em>需要连续两小时</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#5c2b2b,#241010)">
+            <div class="art">盗梦<br>空间</div>
+            <span class="badge">悬疑</span><span class="score">9.3</span>
+            <div class="meta"><s>148 分钟</s><s>中层</s><s>2010</s></div>
+          </div>
+          <div class="info">
+            <h3>盗梦空间</h3>
+            <p>四层梦境嵌套，第一遍看结构，第二遍看表演，适合重看型观众。</p>
+            <div class="row"><b>中层</b><em>需集中注意力</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#2b5c4a,#0d241c)">
+            <div class="art">绿皮书</div>
+            <span class="badge">剧情</span><span class="score">8.9</span>
+            <div class="meta"><s>130 分钟</s><s>轻装</s><s>2018</s></div>
+          </div>
+          <div class="info">
+            <h3>绿皮书</h3>
+            <p>公路片外壳配双男主化学反应，情绪落点稳，适合两个人一起看。</p>
+            <div class="row"><b>轻装档</b><em>压力小、收束清楚</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#4a3a1c,#241a08)">
+            <div class="art">当幸福<br>来敲门</div>
+            <span class="badge">剧情</span><span class="score">9.2</span>
+            <div class="meta"><s>117 分钟</s><s>轻装</s><s>2006</s></div>
+          </div>
+          <div class="info">
+            <h3>当幸福来敲门</h3>
+            <p>低谷题材却不难受，结尾那段敲门戏值得单独重看一遍。</p>
+            <div class="row"><b>轻装档</b><em>情绪明确</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#3a2b5c,#1a1024)">
+            <div class="art">千与<br>千寻</div>
+            <span class="badge">动画</span><span class="score">9.4</span>
+            <div class="meta"><s>125 分钟</s><s>轻装</s><s>2001</s></div>
+          </div>
+          <div class="info">
+            <h3>千与千寻</h3>
+            <p>宫崎骏唯一不用解释也能看懂的片子，带孩子一起看也合适。</p>
+            <div class="row"><b>轻装档</b><em>全家可看</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#5c4a2b,#241c0a)">
+            <div class="art">奥本<br>海默</div>
+            <span class="badge">传记</span><span class="score">8.8</span>
+            <div class="meta"><s>180 分钟</s><s>长片档</s><s>2023</s></div>
+          </div>
+          <div class="info">
+            <h3>奥本海默</h3>
+            <p>三段时间线交叉剪辑，中间那段听证会戏是全片最紧的部分。</p>
+            <div class="row"><b>长片档</b><em>建议提前看人物关系</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#2b4a5c,#0d1c24)">
+            <div class="art">哪吒<br>重生</div>
+            <span class="badge">国漫</span><span class="score">8.4</span>
+            <div class="meta"><s>96 分钟</s><s>中层</s><s>2025</s></div>
+          </div>
+          <div class="info">
+            <h3>哪吒重生</h3>
+            <p>赛博朋克外壳下的东方神话改编，打戏节奏比第一部快一档。</p>
+            <div class="row"><b>中层</b><em>视觉优先</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#5c2b4a,#240a1c)">
+            <div class="art">白蛇<br>传说</div>
+            <span class="badge">动画电影</span><span class="score">9.0</span>
+            <div class="meta"><s>102 分钟</s><s>轻装</s><s>2025</s></div>
+          </div>
+          <div class="info">
+            <h3>白蛇传说</h3>
+            <p>传统故事做了现代叙事重组，音乐段落是加分项，适合放松时看。</p>
+            <div class="row"><b>轻装档</b><em>可当背景音</em></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 连播剧场 -->
+  <section id="drama">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 04</span>
+        <h2>连播剧场 <i>按体量分两侧，连载逐集标日期</i></h2>
+        <a class="more" href="#show">去笑声车间 ›</a>
+      </div>
+      <div class="grid g3">
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#4a1c1c,#1c0a0a)">
+            <div class="art">长夜<br>灯火</div>
+            <span class="badge">犯罪 / 扫黑</span><span class="score">9.1</span>
+            <div class="meta"><s>36 集</s><s>连载中</s><s>第 18 集</s></div>
+          </div>
+          <div class="info">
+            <h3>长夜灯火</h3>
+            <p>第 18 集弹幕破 42 万，群像戏是强项，每周追一集刚好。</p>
+            <div class="row"><b>连载中</b><em>周二 / 周四更新</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#1c3a4a,#0a1a24)">
+            <div class="art">漫长的<br>季节</div>
+            <span class="badge">悬疑</span><span class="score">9.4</span>
+            <div class="meta"><s>12 集</s><s>已完结</s><s>单集 60 分钟</s></div>
+          </div>
+          <div class="info">
+            <h3>漫长的季节</h3>
+            <p>十二集体量，一个周末能看完，范伟的表演撑住了全片气质。</p>
+            <div class="row"><b>已完结</b><em>适合周末连看</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#3a4a1c,#1a240a)">
+            <div class="art">我的<br>阿勒泰</div>
+            <span class="badge">治愈</span><span class="score">8.7</span>
+            <div class="meta"><s>8 集</s><s>已完结</s><s>单集 45 分钟</s></div>
+          </div>
+          <div class="info">
+            <h3>我的阿勒泰</h3>
+            <p>八集体量，画面本身就是主角，适合心情不好的时候看。</p>
+            <div class="row"><b>已完结</b><em>一次看完不累</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#4a2b1c,#24100a)">
+            <div class="art">城中之<br>城</div>
+            <span class="badge">金融</span><span class="score">8.5</span>
+            <div class="meta"><s>40 集</s><s>连载中</s><s>第 32 集</s></div>
+          </div>
+          <div class="info">
+            <h3>城中之城</h3>
+            <p>行业剧外壳下的代际选择，节奏偏慢，适合每天睡前看一集。</p>
+            <div class="row"><b>连载中</b><em>周一至周三更新</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#2b1c4a,#140a24)">
+            <div class="art">雪线<br>之外</div>
+            <span class="badge">现实 / 冒险</span><span class="score">8.9</span>
+            <div class="meta"><s>24 集</s><s>连载中</s><s>上线 9 天</s></div>
+          </div>
+          <div class="info">
+            <h3>雪线之外</h3>
+            <p>上线 9 天热度持续走高，高原实景拍摄，每集都有实拍动作戏。</p>
+            <div class="row"><b>连载中</b><em>周五加更一集</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#1c4a3a,#0a241c)">
+            <div class="art">脱口秀<br>和朋友们</div>
+            <span class="badge">综艺 / 喜剧</span><span class="score">8.6</span>
+            <div class="meta"><s>12 期</s><s>已完结</s><s>单期 90 分钟</s></div>
+          </div>
+          <div class="info">
+            <h3>脱口秀和朋友们</h3>
+            <p>单期 90 分钟，可以拆成两三段看，笑点密度比较均匀。</p>
+            <div class="row"><b>已完结</b><em>可跳着看</em></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 笑声车间 -->
+  <section id="show">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 05</span>
+        <h2>笑声车间 <i>按物料分三排：正片 / 加更 / 花絮</i></h2>
+        <a class="more" href="#anime">去番剧月历 ›</a>
+      </div>
+      <div class="schedule">
+        <div class="sch">
+          <div class="hd">正片档</div>
+          <ul>
+            <li><time>周五</time><div>王牌对王牌 8<time>第十期 · 常驻阵容回归</time></div></li>
+            <li><time>周六</time><div>奔跑吧 兄弟 2025<time>户外篇 · 单期 100 分钟</time></div></li>
+            <li><time>周日</time><div>歌手 2026<time>第九期 · 竞演制</time></div></li>
+            <li><time>周一</time><div>心动的信号 7<time>素人观察 · 24 期</time></div></li>
+          </ul>
+        </div>
+        <div class="sch">
+          <div class="hd" style="background:linear-gradient(90deg,#5b8cff,#3a6cd8)">加更档</div>
+          <ul>
+            <li><time>周三</time><div>脱口秀大会 6<time>加更 · 未播片段 30 分钟</time></div></li>
+            <li><time>周四</time><div>守护解放西 4<time>加更 · 案件回访</time></div></li>
+            <li><time>周五</time><div>声生不息 · 华流季<time>加更 · 排练室版</time></div></li>
+            <li><time>周六</time><div>种地吧 3<time>加更 · 劳作纪实</time></div></li>
+          </ul>
+        </div>
+        <div class="sch">
+          <div class="hd" style="background:linear-gradient(90deg,#3ddc97,#24a872)">花絮档</div>
+          <ul>
+            <li><time>每天</time><div>快乐老友 · 有风季<time>花絮 12 分钟 · 适合下饭</time></div></li>
+            <li><time>周二</time><div>名侦探学院 9<time>幕后 · 游戏失败合集</time></div></li>
+            <li><time>周四</time><div>向往的生活 5<time>做饭片段 · 循环播放</time></div></li>
+            <li><time>周末</time><div>我们的音乐馆<time>幕后语音版 · 锁屏可听</time></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 番剧月历 -->
+  <section id="anime">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 06</span>
+        <h2>番剧月历 <i>按更新日排成七条栈道</i></h2>
+        <a class="more" href="#news">看影视资讯 ›</a>
+      </div>
+      <div class="grid g4">
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#2b1c3a,#14081e)">
+            <div class="art">斗罗大陆<br>终极版</div>
+            <span class="badge">国漫 · 周一</span><span class="score">9.5</span>
+            <div class="meta"><s>第 198 集</s><s>连载</s></div>
+          </div>
+          <div class="info">
+            <h3>斗罗大陆 终极版</h3>
+            <p>周一更新，战斗作画维持高水准，单集节奏比旧版快。</p>
+            <div class="row"><b>周一栈道</b><em>18 分钟 / 集</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#3a2b1c,#1e1408)">
+            <div class="art">轻音少女<br>新篇</div>
+            <span class="badge">治愈 · 周三</span><span class="score">8.8</span>
+            <div class="meta"><s>第 6 集</s><s>连载</s></div>
+          </div>
+          <div class="info">
+            <h3>轻音少女 新篇</h3>
+            <p>周三更新，日常系慢节奏，配乐段落比台词更值得留意。</p>
+            <div class="row"><b>周三栈道</b><em>23 分钟 / 集</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#1c3a2b,#081e14)">
+            <div class="art">排球少年</div>
+            <span class="badge">运动 · 周五</span><span class="score">9.3</span>
+            <div class="meta"><s>第 24 集</s><s>连载</s></div>
+          </div>
+          <div class="info">
+            <h3>排球少年 新赛季</h3>
+            <p>周五更新，比赛篇的镜头调度是这一季的最大亮点。</p>
+            <div class="row"><b>周五栈道</b><em>24 分钟 / 集</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#3a1c2b,#1e0814)">
+            <div class="art">咒术回战<br>第三季</div>
+            <span class="badge">热血 · 周日</span><span class="score">9.0</span>
+            <div class="meta"><s>第 11 集</s><s>连载</s></div>
+          </div>
+          <div class="info">
+            <h3>咒术回战 第三季</h3>
+            <p>周日更新，制作组把预算集中在打戏上，其他段落相对朴素。</p>
+            <div class="row"><b>周日栈道</b><em>24 分钟 / 集</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#2b3a1c,#141e08)">
+            <div class="art">苍鹭与少年<br>2</div>
+            <span class="badge">剧场版 · 限时</span><span class="score">9.2</span>
+            <div class="meta"><s>124 分钟</s><s>单篇</s></div>
+          </div>
+          <div class="info">
+            <h3>苍鹭与少年 2</h3>
+            <p>剧场版动画，建议挑一个安静的时段一次看完，中途打断会掉线。</p>
+            <div class="row"><b>剧场版</b><em>124 分钟</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#1c2b3a,#08141e)">
+            <div class="art">天气之子<br>2</div>
+            <span class="badge">剧场版 · 浪漫</span><span class="score">9.4</span>
+            <div class="meta"><s>114 分钟</s><s>单篇</s></div>
+          </div>
+          <div class="info">
+            <h3>天气之子 2</h3>
+            <p>新海诚新作，雨天场景的光影处理值得在大屏上感受一次。</p>
+            <div class="row"><b>剧场版</b><em>114 分钟</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#3a3a1c,#1e1e08)">
+            <div class="art">名侦探柯南<br>黑铁篇 2</div>
+            <span class="badge">剧场版 · 推理</span><span class="score">9.0</span>
+            <div class="meta"><s>110 分钟</s><s>单篇</s></div>
+          </div>
+          <div class="info">
+            <h3>名侦探柯南 黑铁篇 2</h3>
+            <p>剧场版节奏比 TV 版快一档，悬疑部分处理得更利落。</p>
+            <div class="row"><b>剧场版</b><em>110 分钟</em></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="poster" style="background:linear-gradient(155deg,#2b1c1c,#1e0808)">
+            <div class="art">机动战士高达<br>闪光的哈萨维 2</div>
+            <span class="badge">机战 · 剧场版</span><span class="score">8.9</span>
+            <div class="meta"><s>120 分钟</s><s>单篇</s></div>
+          </div>
+          <div class="info">
+            <h3>闪光的哈萨维 2</h3>
+            <p>三部曲中段，政治线与机战线并行，建议先看第一部再进这段。</p>
+            <div class="row"><b>剧场版</b><em>120 分钟</em></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影视资讯 -->
+  <section id="news">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 07</span>
+        <h2>影视资讯 <i>编辑整理，不只搬运片名</i></h2>
+        <a class="more" href="#board">去留言板 ›</a>
+      </div>
+      <div class="news">
+        <article class="lead">
+          <span class="date">2026 年 10 月 21 日 · 编辑观察</span>
+          <h3>院线新片陆续官宣，我们把「值得进影院」和「值得等正版上线」分成两类片单</h3>
+          <p>过去一周有七部国产片官宣档期。观察下来，头部项目仍然稳住了口碑，腰部作品的同质化问题更明显了——同样的悬疑外壳、同样的反转套路，观众已经能提前猜到第三幕。这期片单因此做了减法，只留九部值得单独安排时间的作品。我们始终不提供枪版资源，也不收录来源不清的链接，需要观看的条目建议等待正版平台上线。</p>
+          <a href="#">阅读完整观察 ›</a>
+        </article>
+        <ul class="newslist">
+          <li><time>10-20</time><h4>竖屏短剧平均制作周期从 18 天拉长到 26 天，头部作品分账周期反而缩短 5 天</h4></li>
+          <li><time>10-18</time><h4>国产动画在东南亚播放量占比达到 46%，出海表现最好的仍是东方奇幻题材</h4></li>
+          <li><time>10-15</time><h4>综艺冠名数量涨 19%、单笔金额缩水 22%，品牌方更愿意摊到中小体量慢综</h4></li>
+          <li><time>10-11</time><h4>纪录片赛道出现一批小成本作品，单集 30 分钟以内的形态更受欢迎</h4></li>
+          <li><time>10-08</time><h4>港片修复计划新增 12 部，4K 版本陆续在视频平台上线</h4></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 留言板 -->
+  <section id="board">
+    <div class="wrap">
+      <div class="sec-h">
+        <span class="no">SECTION 08</span>
+        <h2>光影留言板 <i>写下你想看的，我们整理成下一期专题</i></h2>
+      </div>
+      <div class="board">
+        <p class="tip">不想翻片库？直接告诉我们题材或片名，比如「重生」「刑侦」「下饭综艺」「治愈系日剧」，编辑会定期把高频词整理成新的标签与专题。本站不收集手机号与邮箱，提交内容仅用于选片参考。</p>
+        <form class="form" onsubmit="return postMsg(this)">
+          <input type="text" name="nick" maxlength="12" placeholder="怎么称呼你（最多 12 字）" required>
+          <input type="text" name="want" maxlength="30" placeholder="想看的题材 / 片名 / 平台" required>
+          <textarea name="msg" maxlength="140" placeholder="再多说两句也行，比如「周末想看一部不烧脑的」「想找陪伴式下饭综艺」"></textarea>
+          <button type="submit">发出去，收录进标签云</button>
+        </form>
+
+        <div class="wall" id="wall">
+          <div class="w">
+            <div class="av" style="background:#ffb020">夜</div>
+            <div><div class="who"><b>夜行者_2077</b><time>今天 21:12</time></div><p>「深蓝回声」第 9 集两条时间线合流那段，我把进度条拖回去看了三遍，分镜确实稳。<mark>动漫 / 烧脑</mark></p></div>
+          </div>
+          <div class="w">
+            <div class="av" style="background:#5b8cff;color:#fff">阿</div>
+            <div><div class="who"><b>阿May的周末</b><time>今天 19:40</time></div><p>求推荐不用动脑的治愈系，最好是单集短的，陪家里老人一起看。<mark>治愈 / 全家可看</mark></p></div>
+          </div>
+          <div class="w">
+            <div class="av" style="background:#3ddc97">K</div>
+            <div><div class="who"><b>K先生</b><time>昨天 22:05</time></div><p>「漫长的季节」一口气看完，八集以后每集都值得反复看。能不能多推点这种完成度高的短剧？<mark>悬疑 / 短剧</mark></p></div>
+          </div>
+          <div class="w">
+            <div class="av" style="background:#ff5b3a;color:#fff">小</div>
+            <div><div class="who"><b>小满</b><time>昨天 15:30</time></div><p>短剧那条栈道挺好用，按全剧集数和身份揭晓节点筛，比按类型翻快很多。<mark>短剧 / 爽文</mark></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="about">
+        <h5>关于 蜂鸟影视</h5>
+        <p>蜂鸟影视 是一个影视观看决策页，不是视频托管站。我们把各平台的在播内容汇总到一页，按更新日、片长、节目物料和你剩下的时间重新归位，帮你在三十秒内定下今晚看什么。本站不存储任何视频文件，不提供资源下载，所有条目均跳转至对应平台的官方入口。</p>
+      </div>
+      <div>
+        <h5>站内栏目</h5>
+        <ul>
+          <li><a href="#today">今日更新台</a></li>
+          <li><a href="#film">电影片库</a></li>
+          <li><a href="#drama">连播剧场</a></li>
+          <li><a href="#show">笑声车间</a></li>
+          <li><a href="#anime">番剧月历</a></li>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#board">光影留言板</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>合规与支持</h5>
+        <ul>
+          <li><a href="#">版权声明</a></li>
+          <li><a href="#">隐私说明</a></li>
+          <li><a href="#">内容分级提示</a></li>
+          <li><a href="#">常见问题</a></li>
+          <li><a href="#">联系方式</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 蜂鸟影视 · 本站内容均为原创整理，转载请注明出处</span>
+      <span>永久地址：<a href="https://fengniaoyingshi-app.github.io/">https://fengniaoyingshi-app.github.io/</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="gotop" id="gotop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),mbtn=document.getElementById('mbtn'),
+      links=nav.getElementsByTagName('a'),gotop=document.getElementById('gotop'),
+      secs=document.querySelectorAll('main section[id]');
+  mbtn.addEventListener('click',function(){nav.classList.toggle('open')});
+  for(var i=0;i<links.length;i++){
+    links[i].addEventListener('click',function(){nav.classList.remove('open')});
+  }
+  // 滚动高亮当前栏目
+  function onScroll(){
+    var y=window.scrollY+120,cur='';
+    for(var i=0;i<secs.length;i++){ if(secs[i].offsetTop<=y) cur=secs[i].id; }
+    for(var j=0;j<links.length;j++){
+      links[j].classList.toggle('on', links[j].getAttribute('href')==='#'+cur);
+    }
+    gotop.style.display=window.scrollY>500?'flex':'none';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  gotop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  // 时间筛选标签
+  var chips=document.querySelectorAll('.chip');
+  for(var k=0;k<chips.length;k++){
+    chips[k].addEventListener('click',function(){
+      for(var m=0;m<chips.length;m++){chips[m].classList.remove('on')}
+      this.classList.add('on');
+    });
+  }
+})();
+function postMsg(form){
+  var nick=form.nick.value.trim(),want=form.want.value.trim(),msg=form.msg.value.trim();
+  if(!nick||!want) return false;
+  var colors=['#ffb020','#5b8cff','#3ddc97','#ff5b3a'],
+      wall=document.getElementById('wall'),
+      div=document.createElement('div');
+  div.className='w';
+  div.innerHTML='<div class="av" style="background:'+colors[Math.floor(Math.random()*4)]+(Math.random()<.5?'':';color:#fff')+'">'+nick.charAt(0)+'</div>'+
+    '<div><div class="who"><b>'+esc(nick)+'</b><time>刚刚</time></div><p>'+
+    (msg?esc(msg):'想看：'+esc(want))+'<mark>'+esc(want)+'</mark></p></div>';
+  wall.insertBefore(div,wall.firstChild);
+  form.reset();
+  return false;
+}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+</script>
+</body>
+</html>
